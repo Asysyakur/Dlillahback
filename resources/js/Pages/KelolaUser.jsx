@@ -1,39 +1,75 @@
 import React from "react";
 import { Head } from "@inertiajs/react";
 import Sidebar from "@/Components/Sidebar";
+import { Inertia } from "@inertiajs/inertia";
 
 export default function KelolaUser(props) {
+    const deleteUser = (id) => {
+        if (
+            confirm(
+                "Apakah anda yakin ingin menghapus User ini?"
+            )
+        ) {
+            Inertia.delete(route("deleteuser", id));
+            
+        }
+        window.location.reload();
+    };
     return (
         <>
             <Head title="Kelola User" />
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row bg-gray-200 h-screen">
                 <Sidebar />
                 <div className="w-full md:w-2/3 mx-auto lg:p-10 md:p-6 pl-0 flex flex-col justify-between h-auto">
                     <div className="container">
-                            <h1 class="text-left font-bold text-[48px] text-black mr-4">
-                                Kelola User
-                            </h1>
-                        <div className="relative overflow-x-auto mt-10">
+                        <h1 class="text-left font-bold text-[48px] text-black mr-4">
+                            Kelola User
+                        </h1>
+                        <div className="rounded-lg relative overflow-x-auto mt-10 shadow-md">
                             <table class="w-full text-lg text-left ">
                                 <thead class="text-lg  bg-green-500 text-white">
                                     <tr class="border-b-2 font-bold ">
-                                        <th scope="col" class="px-6 py-3 text-center">
+                                        <th
+                                            scope="col"
+                                            class="px-6 py-3 text-center"
+                                        >
                                             No
                                         </th>
-                                        <th scope="col" class="px-6 py-3 text-center">
+                                        <th
+                                            scope="col"
+                                            class="px-6 py-3 text-center"
+                                        >
                                             Nama
                                         </th>
-                                        <th scope="col" class="px-6 py-3 text-center">
+                                        <th
+                                            scope="col"
+                                            class="px-6 py-3 text-center"
+                                        >
                                             Email
                                         </th>
-                                        <th scope="col" class="px-6 py-3 text-center">
+                                        <th
+                                            scope="col"
+                                            class="px-6 py-3 text-center"
+                                        >
                                             No Telepon
                                         </th>
-                                        <th scope="col" class="px-6 py-3 text-center">
+                                        <th
+                                            scope="col"
+                                            class="px-6 py-3 text-center"
+                                        >
                                             Alamat
                                         </th>
-                                        <th scope="col" class="px-6 py-3 text-center">
+                                        <th
+                                            scope="col"
+                                            class="px-6 py-3 text-center"
+                                        >
                                             Jumlah Pembelian
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            className="px-6 py-3 text-center"
+                                        >
+                                            Aksi
                                         </th>
                                     </tr>
                                 </thead>
@@ -67,6 +103,17 @@ export default function KelolaUser(props) {
                                                 </td>
                                                 <td class="px-6 py-4 text-center">
                                                     {item.pembelian}
+                                                </td>
+                                                <td className="px-6 py-4 text-center">
+                                                    <button
+                                                        onClick={() => {
+                                                            deleteUser(
+                                                                item.id
+                                                            );
+                                                        }}
+                                                    >
+                                                        Hapus
+                                                    </button>
                                                 </td>
                                             </tr>
                                         </>

@@ -56,9 +56,9 @@ export default function KelolaTransaksi(props) {
     return (
         <>
         <Head title="Kelola Pesanan" />
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row bg-gray-200 h-screen">
             <Sidebar />
-            <main className="w-full md:w-2/3 mx-auto lg:p-10 md:p-6 pl-0 flex flex-col justify-between h-auto">
+            <main className="w-full md:w-2/3 mx-auto lg:p-10 md:p-6 pl-0 flex flex-col justify-between h-auto bg-gray-200">
                 <div className="container">
                     <h1 className="text-left font-bold text-[48px] text-black mr-4">
                         Kelola Pesanan
@@ -86,7 +86,7 @@ export default function KelolaTransaksi(props) {
                                             ? product.name
                                             : "Product Not Found"}
                                     </h2>
-                                    <p className="text-3xl font-bold text-blue-500">
+                                    <p className="text-3xl font-bold text-green-500">
                                         Rp. {transaction.total_harga}
                                     </p>
                                     <p className="text-xl font-bold text-gray-800">
@@ -94,7 +94,7 @@ export default function KelolaTransaksi(props) {
                                     </p>
                                     <Link
                                         href={transaction.bukti_pembayaran} // Replace with your desired URL
-                                        className="text-blue-500 hover:underline justify-end flex"
+                                        className="text-green-500 hover:underline justify-end flex"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >

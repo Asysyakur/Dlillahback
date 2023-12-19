@@ -162,8 +162,11 @@ public function editprofil(Request $request,$userId)
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(User $User)
+    public function destroy($idUser)
     {
-        //
+        $user = User::find($idUser);
+        $user->delete();
+        return inertia::location(route('user'));
     }
+
 }

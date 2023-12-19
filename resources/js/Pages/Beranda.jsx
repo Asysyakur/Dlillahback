@@ -10,7 +10,7 @@ export default function Dashboard(props) {
             <Sidebar />
             <main className="flex-1 overflow-y-auto bg-gray-200">
                 <div className="py-6">
-                    <div className="mx-auto max-w-7xl px-8 sm:px-6 md:pl-24">
+                    <div className="mx-auto my-12 max-w-7xl px-8 sm:px-6 md:pl-24">
                         <h1 className="text-4xl font-extrabold text-gray-900">
                             Selamat Datang,{" "}
                             <span className="text-green-500">{"Admin"}!</span>

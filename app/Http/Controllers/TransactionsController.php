@@ -57,8 +57,8 @@ public function sudah($userId)
     // Validate the incoming request data
     $validatedData = $request->validate([
         // Define your validation rules here
-        'status' => 'required|integer', // For example, assuming 'status' is being updated
-        'statusproses' =>'required|integer'
+        'status' => 'integer', // For example, assuming 'status' is being updated
+        'statusproses' =>'integer'
     ]);
 
     // Find the transaction by ID

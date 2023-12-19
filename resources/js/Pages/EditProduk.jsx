@@ -70,6 +70,7 @@ export default function EditProduk({ props, visible, onClose,options, editData }
 
     return (
         <>
+         <main className="flex-1 overflow-y-auto bg-gray-200">
             <div className="flex flex-col md:flex-row ">
                 <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
                     <div className="bg-white p-8 rounded-md shadow-md">
@@ -221,6 +222,7 @@ export default function EditProduk({ props, visible, onClose,options, editData }
                     </div>
                 </div>
             </div>
+            </main>
         </>
     );
 }

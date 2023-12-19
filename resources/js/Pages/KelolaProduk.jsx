@@ -35,9 +35,9 @@ export default function KelolaProduk(props) {
     return (
         <>
             <Head title="Kelola Produk" />
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row bg-gray-200">
                 <Sidebar />
-                <div className="w-full md:w-2/3 mx-auto lg:p-10 md:p-6 pl-0 flex flex-col justify-between h-auto">
+                <div className="w-full md:w-2/3 mx-auto lg:p-10 md:p-6 pl-0 flex flex-col justify-between h-auto bg-gray-200">
                     <div className="container">
                         <div className="flex justify-between items-center">
                             <h1 className="text-left font-bold text-[48px] text-black mr-4">
@@ -47,15 +47,15 @@ export default function KelolaProduk(props) {
                                 <button onClick={() =>
                                                     setAddProdukVisible(true)
                                                 }
-                                className="px-10 py-3 w-auto bg-green-500 border border-transparent rounded-md font-semibold text-md text-white hover:bg-green-800 focus:bg-blue-400 active:bg-blue-100 focus:outline-none transition ease-in-out duration-150">
+                                className="px-10 py-3 w-auto bg-green-500 border border-transparent rounded-md font-semibold text-md text-white hover:bg-green-800 focus:bg-green-400 active:bg-green-100 focus:outline-none transition ease-in-out duration-150 shadow-md">
                                     <h1 className="text-base font-bold">
                                         Tambah Produk
                                     </h1>
                                 </button>
                         </div>
 
-                        <div className="relative overflow-x-auto mt-10">
-                            <table className="w-full text-lg text-left ">
+                        <div className="rounded-lg relative overflow-x-auto mt-10 shadow-md">
+                            <table className="w-full text-lg text-left">
                                 <thead className="text-lg  bg-green-500 text-white">
                                     <tr className="border-b-2 font-bold ">
                                         <th scope="col" className="px-6 py-3 text-center">
